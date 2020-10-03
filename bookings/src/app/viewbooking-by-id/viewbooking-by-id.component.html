@@ -1,0 +1,18 @@
+ <h3> ViewbookingById</h3>
+ 
+ <form #myform= ngForm (ngSubmit)="myform.valid &&  viewBookingId(myform)">
+ <div class="from-group">
+     <label> bookingById</label>
+     <input type="number" name=viewbookingById ngModel class="from-control">
+ </div>
+ <input type="submit" value= "search" class "btn btn-success">
+</form>
+<br>
+<div *ngIf ="booking!==undefined">
+    
+        <h3>viewbookingById </h3>   
+        {{booking.bookingById}}
+       <div *ngif=booking.viewbookingId==null>
+           enter valid booking id
+       </div>
+</div>  
